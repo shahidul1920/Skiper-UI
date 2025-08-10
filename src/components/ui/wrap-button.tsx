@@ -1,6 +1,6 @@
 import React from "react"
 import Link from "next/link"
-import { ArrowRight, Globe } from "lucide-react"
+import { ArrowRight, Camera, Globe } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 
@@ -51,9 +51,14 @@ const WrapButton: React.FC<WrapButtonProps> = ({
               {children ? children : "Get Started"}
             </p>
           </div>
-          <div className="text-[#3b3a3a] group-hover:ml-2  ease-in-out transition-all size-[26px] flex items-center justify-center rounded-full border-2 border-[#3b3a3a]  ">
-            <ArrowRight
+          <div className="text-[#3b3a3a] group-hover:ml-2  ease-in-out transition-all size-[26px] flex items-center justify-center">
+            {/* <ArrowRight
               size={18}
+              className="group-hover:rotate-45 ease-in-out transition-all "
+            /> */}
+            <Camera
+              size={22}
+              color="#fff"
               className="group-hover:rotate-45 ease-in-out transition-all "
             />
           </div>
