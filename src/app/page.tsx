@@ -5,8 +5,20 @@ import WrapButton from "@/components/ui/wrap-button";
 import { Facebook, Github, Instagram, Link, Linkedin, Twitter } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { CardCarousel } from "@/components/ui/card-carousel";
 
 export default function Home() {
+
+  const images = [
+    { src: "/images/11.jpg", alt: "Image 1" },
+    { src: "/images/22.jpg", alt: "Image 2" },
+    { src: "/images/33.jpg", alt: "Image 3" },
+    { src: "/images/44.jpg", alt: "Image 4" },
+    { src: "/images/55.jpg", alt: "Image 5" },
+    { src: "/images/66.jpg", alt: "Image 6" }
+  ]
+
+
   return (
     <div>
       <h1 className="text-4xl font-bold">Welcome to Face Around</h1>
@@ -29,6 +41,18 @@ export default function Home() {
         </motion.div>
         <FlipLink href="https://twitter.com/"> Twitter</FlipLink>
       </motion.div>
+
+
+      <div className="pt-40">
+        <CardCarousel 
+          images={images}
+          autoplayDelay={2000}
+          showPagination={true}
+          showNavigation={true}
+        />
+      </div>
+
+
     </div>
   );
 }
